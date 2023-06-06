@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import *
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pymongo import MongoClient
 import requests
 import random
@@ -32,7 +33,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply('msg text',reply_markup-InlineKeyboardMarkup([[InlineKeyboardMarkup([[InlineKeyboardButton(text="Add Me to Group", url="https://t.me/Quotlibot?startgroup=true")]]))]]))
+        await message.reply('msg text',reply_markup-InlineKeyboardMarkup([[InlineKeyboardButton(text="Add Me to Group", url="https://t.me/Quotlibot?startgroup=true")]]))
 
 
 @bot.on_message(
