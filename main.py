@@ -32,7 +32,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_text("Hi! My name is Ishi. I'm an Artificial Intelligence\n /chatbot - [on|off]")
+        await message.reply('msg text',reply_markup-InlineKeyboardMarkup([[InlineKeyboardMarkup([[InlineKeyboardButton(text="Add Me to Group", url="https://t.me/Quotlibot?startgroup=true")]]))]]))
 
 
 @bot.on_message(
